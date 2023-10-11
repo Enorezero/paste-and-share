@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee50edcb-979c-465f-ad6b-6a6c2f8da653" name="Changes" comment="init">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="ee50edcb-979c-465f-ad6b-6a6c2f8da653" name="Changes" comment="fixed pom">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +101,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1697006497463</updated>
-      <workItem from="1697006498656" duration="8747000" />
+      <workItem from="1697006498656" duration="9433000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1697034821830</created>
@@ -112,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697034821830</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixed pom">
+      <created>1697036116030</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1697036116030</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,7 +134,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="github/master" />
                       </list>
                     </value>
                   </entry>
@@ -144,7 +149,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="fixed pom" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed pom" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
