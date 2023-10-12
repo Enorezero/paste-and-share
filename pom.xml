@@ -5,7 +5,7 @@
   <groupId>ru.enorezero.paste.and.share</groupId>
   <artifactId>paste-and-share</artifactId>
   <version>1.0-SNAPSHOT</version>
-  <packaging>pom</packaging>
+  <packaging>jar</packaging>
 
   <name>paste-and-share</name>
   <url>http://maven.apache.org</url>
