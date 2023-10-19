@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee50edcb-979c-465f-ad6b-6a6c2f8da653" name="Changes" comment="fixed pom">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -28,6 +30,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2Wbg3DVnFqt5RcjozPlKWQJBdVM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -54,8 +59,16 @@
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "File.Encoding",
     "spring.configuration.checksum": "2dff10a3785488c597d224f74dbd993b"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\denst\source\repos\paste-and-share" />
@@ -68,7 +81,32 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.EurekaServerApplication">
+  <component name="RunManager" selected="Maven.paste-and-share [clean]">
+    <configuration name="paste-and-share [clean]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="api-gateway" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.enorezero.paste.and.share.apigateway.ApiGatewayApplication" />
@@ -91,10 +129,16 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Maven.paste-and-share [clean]" />
       <item itemvalue="Spring Boot.ApiGatewayApplication" />
       <item itemvalue="Spring Boot.PasteServiceApplication" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Maven.paste-and-share [clean]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -105,7 +149,11 @@
       <option name="presentableId" value="Default" />
       <updated>1697006497463</updated>
       <workItem from="1697006498656" duration="9433000" />
-      <workItem from="1697197906617" duration="2879000" />
+      <workItem from="1697197906617" duration="7409000" />
+      <workItem from="1697511749636" duration="2091000" />
+      <workItem from="1697547296860" duration="9387000" />
+      <workItem from="1697607948411" duration="614000" />
+      <workItem from="1697639460530" duration="8966000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1697034821830</created>
@@ -155,6 +203,19 @@
     <MESSAGE value="init" />
     <MESSAGE value="fixed pom" />
     <option name="LAST_COMMIT_MESSAGE" value="fixed pom" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" log-message="true" type="java-exception">
+          <properties class="org.springframework.beans.factory.BeanCreationException" package="org.springframework.beans.factory" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint enabled="true" type="java-exception" />
+      </default-breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
