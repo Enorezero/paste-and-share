@@ -6,7 +6,6 @@ import ru.enorezero.paste.and.share.pasteservice.api.request.PasteRequest;
 import ru.enorezero.paste.and.share.pasteservice.api.responce.PasteResponce;
 import ru.enorezero.paste.and.share.pasteservice.model.PasteEntity;
 import ru.enorezero.paste.and.share.pasteservice.repository.PastesRepository;
-import ru.enorezero.paste.and.share.pasteservice.repository.YandexS3Repository;
 
 import java.time.LocalDateTime;
 import java.util.Base64;
@@ -18,7 +17,6 @@ public class PasteServiceImpl implements PasteService{
     @Autowired
     PastesRepository pastesRepo;
     //@Autowired
-    YandexS3Repository yandexS3Repo;
 
     @Override
     public PasteEntity getByHash(String hash) {
