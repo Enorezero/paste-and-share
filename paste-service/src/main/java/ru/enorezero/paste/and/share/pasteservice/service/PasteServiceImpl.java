@@ -15,13 +15,27 @@ import java.util.List;
 public class PasteServiceImpl implements PasteService{
 
     @Autowired
+    StorageService storage;
+
+    @Autowired
     PastesRepository pastesRepo;
-    //@Autowired
 
     @Override
-    public PasteEntity getByHash(String hash) {
+    public PasteResponce getByHash(String hash) {
+        PasteResponce responce = new PasteResponce();
+        PasteEntity foundEntity =  pastesRepo.findByPastesId(unHashURLByBase64(hash));
 
-        return pastesRepo.findByPastesId(deHashURLByBase64(hash));
+        if(foundEntity.getCreationTime().isAfter(foundEntity.getExpirationTime())){
+            responce.setData("Срок пасты истёк");
+            return responce;
+        }
+
+        String data = storage.downloadFile("paste-and-share", foundEntity.getKeyName());
+
+        responce.setData(data);
+        responce.setLifetime(foundEntity.getExpirationTime());
+
+        return responce;
     }
 
     @Override
@@ -31,13 +45,17 @@ public class PasteServiceImpl implements PasteService{
 
     @Override
     public String createPaste(PasteRequest request) {
-        //String metadataURL = yandexS3Repo.save(request.getData());
+        String keyName = storage.uploadText("paste-and-share",request.getData());
+
         PasteEntity paste = new PasteEntity();
-        paste.setExpirationTime(LocalDateTime.now().plusHours(3));
+        paste.setKeyName(keyName);
         paste.setCreationTime(LocalDateTime.now());
+        //реализовать подсчёт истечения даты
+        paste.setExpirationTime(LocalDateTime.now().plusHours(3));
         paste.setStatus(request.getStatus().name());
-        paste.setMetadataURL("3301");
+
         pastesRepo.save(paste);
+
         return hashURLByBase64(paste.getPastesId());
     }
 
@@ -45,7 +63,7 @@ public class PasteServiceImpl implements PasteService{
         return Base64.getEncoder().encodeToString(Long.toString(id).getBytes()) ;
     }
 
-    private Long deHashURLByBase64(String hash) {
+    private Long unHashURLByBase64(String hash) {
         return Long.parseLong(new String(Base64.getDecoder().decode(hash.getBytes())));
     }
 }

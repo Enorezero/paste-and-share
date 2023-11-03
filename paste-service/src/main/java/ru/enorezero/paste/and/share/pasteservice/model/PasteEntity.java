@@ -2,7 +2,6 @@ package ru.enorezero.paste.and.share.pasteservice.model;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
@@ -17,8 +16,8 @@ public class PasteEntity {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "hibernate_sequence")
     @Column(name = "pastes_id", nullable = false)
     private Long pastesId;
-    @Column(name = "metadata_url", nullable = false)
-    private String metadataURL;
+    @Column(name = "storage_key_name", nullable = false)
+    private String keyName;
     @Column(name = "expiration_time", nullable = false)
     private LocalDateTime expirationTime;
     @Column(name = "creation_time", nullable = false)

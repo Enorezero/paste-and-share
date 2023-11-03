@@ -7,7 +7,7 @@ import ru.enorezero.paste.and.share.pasteservice.model.PasteEntity;
 import java.util.List;
 
 public interface PasteService {
-    public PasteEntity getByHash(String hash);
+    public PasteResponce getByHash(String hash);
     public List<PasteResponce> getPublicPastes(int amount);
     public String createPaste(PasteRequest request);
 

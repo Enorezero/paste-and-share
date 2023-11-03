@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee50edcb-979c-465f-ad6b-6a6c2f8da653" name="Changes" comment="fixed pom">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cbaf91b2-8a73-4784-9127-e87c5806602d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cbaf91b2-8a73-4784-9127-e87c5806602d.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="ee50edcb-979c-465f-ad6b-6a6c2f8da653" name="Changes" comment="AWS config">
+      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/config/StorageConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/service/StorageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/service/StorageServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/paste-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/api/responce/PasteResponce.java" beforeDir="false" afterPath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/api/responce/PasteResponce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/model/PasteEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/model/PasteEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/service/PasteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/service/PasteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/service/PasteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/service/PasteServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +178,8 @@
       <workItem from="1698238197981" duration="242000" />
       <workItem from="1698839678348" duration="858000" />
       <workItem from="1698883747297" duration="5906000" />
-      <workItem from="1698974468454" duration="1625000" />
+      <workItem from="1698974468454" duration="7943000" />
+      <workItem from="1699016125368" duration="2920000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1697034821830</created>
@@ -187,7 +195,23 @@
       <option name="project" value="LOCAL" />
       <updated>1697036116030</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="AWS config">
+      <option name="closed" value="true" />
+      <created>1698979300360</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698979300360</updated>
+    </task>
+    <task id="LOCAL-00004" summary="AWS config">
+      <option name="closed" value="true" />
+      <created>1698979534803</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698979534803</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,9 +242,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/api-gateway" />
+      <path value="$PROJECT_DIR$/eureka-server" />
+      <path value="$PROJECT_DIR$/paste-service" />
+    </ignored-roots>
     <MESSAGE value="init" />
     <MESSAGE value="fixed pom" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed pom" />
+    <MESSAGE value="AWS config" />
+    <option name="LAST_COMMIT_MESSAGE" value="AWS config" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
