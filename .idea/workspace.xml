@@ -5,17 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ee50edcb-979c-465f-ad6b-6a6c2f8da653" name="Changes" comment="AWS config">
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/config/StorageConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/service/StorageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/service/StorageServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/enorezero/paste/and/share/authservice/AuthServiceApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/ru/enorezero/paste/and/share/authservice/model/UserCredentials.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth-service/src/test/java/ru/enorezero/paste/and/share/authservice/AuthServiceApplicationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/payload/ExpirationTime.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/paste-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cbaf91b2-8a73-4784-9127-e87c5806602d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cbaf91b2-8a73-4784-9127-e87c5806602d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cbaf91b2-8a73-4784-9127-e87c5806602d/storage_v2/_src_/database/pastes_db.3VRmyQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cbaf91b2-8a73-4784-9127-e87c5806602d/storage_v2/_src_/database/pastes_db.3VRmyQ/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/api/responce/PasteResponce.java" beforeDir="false" afterPath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/api/responce/PasteResponce.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/model/PasteEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/model/PasteEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eureka-server/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/eureka-server/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paste-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/paste-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/api/ExpirationTime.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/api/Visibility.java" beforeDir="false" afterPath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/payload/Visibility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/api/request/PasteRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/payload/request/PasteRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/api/request/PasteRequestValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/payload/request/PasteRequestValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/api/responce/PasteResponce.java" beforeDir="false" afterPath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/payload/responce/PasteResponce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/config/StorageConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/config/StorageConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/service/PasteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/service/PasteService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/service/PasteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/service/PasteServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/service/StorageServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/service/StorageServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,35 +78,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;18&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;1ffc361e41d6a48eb607db9abc1a35cf&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "18",
+    "last_opened_file_path": "C:/Users/denst/IdeaProjects/paste-and-share/auth-service",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "spring.configuration.checksum": "491b1df908702763bdf2534127a395dd",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -101,7 +123,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Maven.paste-and-share [clean]">
+  <component name="RunManager" selected="Spring Boot.PasteServiceApplication">
     <configuration name="paste-and-share [clean]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -134,6 +156,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AuthServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="auth-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.enorezero.paste.and.share.authservice.AuthServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="eureka-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="ru.enorezero.paste.and.share.eurekaserver.EurekaServerApplication" />
@@ -150,6 +179,7 @@
     </configuration>
     <list>
       <item itemvalue="Maven.paste-and-share [clean]" />
+      <item itemvalue="Spring Boot.AuthServiceApplication" />
       <item itemvalue="Spring Boot.ApiGatewayApplication" />
       <item itemvalue="Spring Boot.PasteServiceApplication" />
       <item itemvalue="Spring Boot.EurekaServerApplication" />
@@ -179,7 +209,9 @@
       <workItem from="1698839678348" duration="858000" />
       <workItem from="1698883747297" duration="5906000" />
       <workItem from="1698974468454" duration="7943000" />
-      <workItem from="1699016125368" duration="2920000" />
+      <workItem from="1699016125368" duration="14870000" />
+      <workItem from="1699107312026" duration="7311000" />
+      <workItem from="1699160096590" duration="360000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1697034821830</created>
@@ -211,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698979534803</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Update paste-service">
+      <option name="closed" value="true" />
+      <created>1699021126864</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1699021126864</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +290,8 @@
     <MESSAGE value="init" />
     <MESSAGE value="fixed pom" />
     <MESSAGE value="AWS config" />
-    <option name="LAST_COMMIT_MESSAGE" value="AWS config" />
+    <MESSAGE value="Update paste-service" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update paste-service" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

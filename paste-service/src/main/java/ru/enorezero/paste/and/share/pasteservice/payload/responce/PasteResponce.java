@@ -1,4 +1,4 @@
-package ru.enorezero.paste.and.share.pasteservice.api.responce;
+package ru.enorezero.paste.and.share.pasteservice.payload.responce;
 
 import lombok.Data;
 

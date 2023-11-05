@@ -1,8 +1,7 @@
 package ru.enorezero.paste.and.share.pasteservice.service;
 
-import ru.enorezero.paste.and.share.pasteservice.api.request.PasteRequest;
-import ru.enorezero.paste.and.share.pasteservice.api.responce.PasteResponce;
-import ru.enorezero.paste.and.share.pasteservice.model.PasteEntity;
+import ru.enorezero.paste.and.share.pasteservice.payload.request.PasteRequest;
+import ru.enorezero.paste.and.share.pasteservice.payload.responce.PasteResponce;
 
 import java.util.List;
 

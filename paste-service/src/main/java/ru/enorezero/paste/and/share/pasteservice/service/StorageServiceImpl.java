@@ -20,6 +20,7 @@ public class StorageServiceImpl implements StorageService {
 
     @Override
     public String uploadText(final String bucketName, final String text){
+        //придумать как лучше называть объекты
         String textName = UUID.randomUUID().toString() + text.length();
         s3Client.putObject(bucketName, textName, text);
         return textName;

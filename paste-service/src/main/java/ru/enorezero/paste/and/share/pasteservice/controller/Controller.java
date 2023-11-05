@@ -3,8 +3,8 @@ package ru.enorezero.paste.and.share.pasteservice.controller;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import ru.enorezero.paste.and.share.pasteservice.api.request.PasteRequest;
-import ru.enorezero.paste.and.share.pasteservice.api.responce.PasteResponce;
+import ru.enorezero.paste.and.share.pasteservice.payload.request.PasteRequest;
+import ru.enorezero.paste.and.share.pasteservice.payload.responce.PasteResponce;
 import ru.enorezero.paste.and.share.pasteservice.service.PasteService;
 
 import java.util.List;
@@ -22,11 +22,10 @@ public class Controller {
         return "succesfully!";
     }
 
-//    @GetMapping("/{hash}")
-//    public String getByHash(@PathVariable String hash){
-//
-//        return service.deHashURLByBase64(hash);
-//    }
+    @GetMapping("/{hash}")
+    public PasteResponce getByHash(@PathVariable String hash){
+        return service.getByHash(hash);
+    }
 
     @GetMapping("/")
     public List<PasteResponce> getLastPublic(){

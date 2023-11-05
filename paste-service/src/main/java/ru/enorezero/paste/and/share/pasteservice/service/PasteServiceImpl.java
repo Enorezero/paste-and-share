@@ -2,8 +2,8 @@ package ru.enorezero.paste.and.share.pasteservice.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ru.enorezero.paste.and.share.pasteservice.api.request.PasteRequest;
-import ru.enorezero.paste.and.share.pasteservice.api.responce.PasteResponce;
+import ru.enorezero.paste.and.share.pasteservice.payload.request.PasteRequest;
+import ru.enorezero.paste.and.share.pasteservice.payload.responce.PasteResponce;
 import ru.enorezero.paste.and.share.pasteservice.model.PasteEntity;
 import ru.enorezero.paste.and.share.pasteservice.repository.PastesRepository;
 
@@ -25,12 +25,13 @@ public class PasteServiceImpl implements PasteService{
         PasteResponce responce = new PasteResponce();
         PasteEntity foundEntity =  pastesRepo.findByPastesId(unHashURLByBase64(hash));
 
-        if(foundEntity.getCreationTime().isAfter(foundEntity.getExpirationTime())){
+        //подумать нужно ли creationTime
+        if(LocalDateTime.now().isAfter(foundEntity.getExpirationTime())){
             responce.setData("Срок пасты истёк");
             return responce;
         }
 
-        String data = storage.downloadFile("paste-and-share", foundEntity.getKeyName());
+        String data = storage.downloadFile("rubin", foundEntity.getKeyName());
 
         responce.setData(data);
         responce.setLifetime(foundEntity.getExpirationTime());
@@ -45,13 +46,12 @@ public class PasteServiceImpl implements PasteService{
 
     @Override
     public String createPaste(PasteRequest request) {
-        String keyName = storage.uploadText("paste-and-share",request.getData());
+        String keyName = storage.uploadText("rubin",request.getData());
 
         PasteEntity paste = new PasteEntity();
         paste.setKeyName(keyName);
         paste.setCreationTime(LocalDateTime.now());
-        //реализовать подсчёт истечения даты
-        paste.setExpirationTime(LocalDateTime.now().plusHours(3));
+        paste.setExpirationTime(LocalDateTime.now().plusSeconds(request.getLifetime().getSeconds()));
         paste.setStatus(request.getStatus().name());
 
         pastesRepo.save(paste);
