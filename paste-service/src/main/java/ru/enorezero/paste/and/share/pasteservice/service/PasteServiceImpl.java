@@ -2,6 +2,7 @@ package ru.enorezero.paste.and.share.pasteservice.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import ru.enorezero.paste.and.share.pasteservice.payload.Visibility;
 import ru.enorezero.paste.and.share.pasteservice.payload.request.PasteRequest;
 import ru.enorezero.paste.and.share.pasteservice.payload.responce.PasteResponce;
 import ru.enorezero.paste.and.share.pasteservice.model.PasteEntity;
@@ -22,21 +23,19 @@ public class PasteServiceImpl implements PasteService{
 
     @Override
     public PasteResponce getByHash(String hash) {
-        PasteResponce responce = new PasteResponce();
         PasteEntity foundEntity =  pastesRepo.findByPastesId(unHashURLByBase64(hash));
 
         //подумать нужно ли creationTime
-        if(LocalDateTime.now().isAfter(foundEntity.getExpirationTime())){
-            responce.setData("Срок пасты истёк");
-            return responce;
+        if(LocalDateTime.now().isAfter(foundEntity.getExpirationTime()) || foundEntity == null){
+            if(foundEntity != null){
+                pastesRepo.delete(foundEntity);
+            }
+            return new PasteResponce("Такой пасты не существует", Visibility.PUBLIC);
         }
 
         String data = storage.downloadFile("rubin", foundEntity.getKeyName());
 
-        responce.setData(data);
-        responce.setLifetime(foundEntity.getExpirationTime());
-
-        return responce;
+        return new PasteResponce(data, foundEntity.getStatus());
     }
 
     @Override
@@ -48,11 +47,12 @@ public class PasteServiceImpl implements PasteService{
     public String createPaste(PasteRequest request) {
         String keyName = storage.uploadText("rubin",request.getData());
 
-        PasteEntity paste = new PasteEntity();
-        paste.setKeyName(keyName);
-        paste.setCreationTime(LocalDateTime.now());
-        paste.setExpirationTime(LocalDateTime.now().plusSeconds(request.getLifetime().getSeconds()));
-        paste.setStatus(request.getStatus().name());
+        PasteEntity paste = new PasteEntity().builder()
+                .keyName(keyName)
+                .creationTime(LocalDateTime.now())
+                .expirationTime(LocalDateTime.now().plusSeconds(request.getLifetime().getSeconds()))
+                .status(request.getStatus())
+                .build();
 
         pastesRepo.save(paste);
 

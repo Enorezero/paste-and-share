@@ -1,13 +1,20 @@
 package ru.enorezero.paste.and.share.pasteservice.model;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.springframework.stereotype.Component;
+import ru.enorezero.paste.and.share.pasteservice.payload.Visibility;
 
 import java.time.LocalDateTime;
 
 @Component
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "pastes")
 public class PasteEntity {
@@ -22,6 +29,7 @@ public class PasteEntity {
     private LocalDateTime expirationTime;
     @Column(name = "creation_time", nullable = false)
     private LocalDateTime creationTime;
+    @Enumerated(EnumType.STRING)
     @Column(name = "status", nullable = false)
-    private String status;
+    private Visibility status;
 }

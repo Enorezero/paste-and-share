@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import ru.enorezero.paste.and.share.pasteservice.payload.request.PasteRequest;
 import ru.enorezero.paste.and.share.pasteservice.payload.responce.PasteResponce;
 import ru.enorezero.paste.and.share.pasteservice.service.PasteService;
+import org.springframework.http.ResponseEntity;
 
 import java.util.List;
 
@@ -18,22 +19,23 @@ public class Controller {
     PasteService service;
 
     @GetMapping("/test")
-    public String test(){
-        return "succesfully!";
+    public ResponseEntity<String> test(){
+        return ResponseEntity.ok("succesfully!");
     }
 
     @GetMapping("/{hash}")
-    public PasteResponce getByHash(@PathVariable String hash){
-        return service.getByHash(hash);
+    public ResponseEntity<PasteResponce> getByHash(@PathVariable String hash){
+        return ResponseEntity.ok(service.getByHash(hash));
     }
 
     @GetMapping("/")
-    public List<PasteResponce> getLastPublic(){
+    public ResponseEntity<List<PasteResponce>> getLastPublic(){
         return null;
     }
 
     @PostMapping
-    public String createPaste(@RequestBody PasteRequest request){
-        return service.createPaste(request);
+    public ResponseEntity<String> createPaste(@RequestBody PasteRequest request){
+
+        return ResponseEntity.ok(service.createPaste(request));
     }
 }
