@@ -1,16 +1,14 @@
-package ru.enorezero.paste.and.share.pasteservice.payload.responce;
+package ru.enorezero.paste.and.share.pasteservice.payload.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import ru.enorezero.paste.and.share.pasteservice.payload.Visibility;
 
-import java.time.LocalDateTime;
-
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class PasteResponce {
+public class PasteResponse {
     String data;
     Visibility status;
 }

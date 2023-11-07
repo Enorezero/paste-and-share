@@ -2,44 +2,46 @@ package ru.enorezero.paste.and.share.pasteservice.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ru.enorezero.paste.and.share.pasteservice.payload.Visibility;
+import ru.enorezero.paste.and.share.pasteservice.exception.NotFoundException;
+import ru.enorezero.paste.and.share.pasteservice.exception.UnhashableLinkException;
 import ru.enorezero.paste.and.share.pasteservice.payload.request.PasteRequest;
-import ru.enorezero.paste.and.share.pasteservice.payload.responce.PasteResponce;
+import ru.enorezero.paste.and.share.pasteservice.payload.response.PasteResponse;
 import ru.enorezero.paste.and.share.pasteservice.model.PasteEntity;
 import ru.enorezero.paste.and.share.pasteservice.repository.PastesRepository;
+import ru.enorezero.paste.and.share.pasteservice.repository.StorageRepository;
 
 import java.time.LocalDateTime;
 import java.util.Base64;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PasteServiceImpl implements PasteService{
 
     @Autowired
-    StorageService storage;
+    StorageRepository storage;
 
     @Autowired
     PastesRepository pastesRepo;
 
     @Override
-    public PasteResponce getByHash(String hash) {
-        PasteEntity foundEntity =  pastesRepo.findByPastesId(unHashURLByBase64(hash));
+    public PasteResponse getByHash(String hash) {
+        Optional<PasteEntity> foundEntity = Optional.of(pastesRepo.findOptionalByPastesId(unhashURLByBase64(hash))
+                .orElseThrow(() -> new NotFoundException("Паста не найдена")));
 
         //подумать нужно ли creationTime
-        if(LocalDateTime.now().isAfter(foundEntity.getExpirationTime()) || foundEntity == null){
-            if(foundEntity != null){
-                pastesRepo.delete(foundEntity);
-            }
-            return new PasteResponce("Такой пасты не существует", Visibility.PUBLIC);
+        if(LocalDateTime.now().isAfter(foundEntity.get().getExpirationTime())){
+            pastesRepo.delete(foundEntity.get());
+            throw new NotFoundException("Время жизни пасты истекло");
         }
 
-        String data = storage.downloadFile("rubin", foundEntity.getKeyName());
+        String data = storage.downloadFile("rubin", foundEntity.get().getKeyName());
 
-        return new PasteResponce(data, foundEntity.getStatus());
+        return new PasteResponse(data, foundEntity.get().getStatus());
     }
 
     @Override
-    public List<PasteResponce> getPublicPastes(int amount) {
+    public List<PasteResponse> getPublicPastes(int amount) {
         return null;
     }
 
@@ -63,7 +65,12 @@ public class PasteServiceImpl implements PasteService{
         return Base64.getEncoder().encodeToString(Long.toString(id).getBytes()) ;
     }
 
-    private Long unHashURLByBase64(String hash) {
-        return Long.parseLong(new String(Base64.getDecoder().decode(hash.getBytes())));
+    private Long unhashURLByBase64(String hash) {
+        try {
+            return Long.parseLong(new String(Base64.getDecoder().decode(hash.getBytes())));
+        }catch (NumberFormatException e){
+            throw new UnhashableLinkException("Невозможно расхешировать строку");
+        }
     }
+
 }
