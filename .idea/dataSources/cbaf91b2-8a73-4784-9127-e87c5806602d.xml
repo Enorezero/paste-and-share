@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.48">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>833</IntrospectionStateNumber>
+      <IntrospectionStateNumber>845</IntrospectionStateNumber>
       <ServerVersion>16.0</ServerVersion>
       <StartupTime>1698681161</StartupTime>
       <TimeZones>true ACDT
@@ -801,7 +801,7 @@ false Zulu
 14643||10|C|G
 14643||-9223372036854775808|U|G
 14643||10|U|G</Grants>
-      <IntrospectionStateNumber>833</IntrospectionStateNumber>
+      <IntrospectionStateNumber>845</IntrospectionStateNumber>
       <ObjectId>16562</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4229,79 +4229,69 @@ false Zulu
     <schema id="265" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>833</IntrospectionStateNumber>
+      <IntrospectionStateNumber>845</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>524</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
-    <object-type id="266" parent="265" name="status_type">
-      <Labels>PUBLIC
-UNLISTED
-PRIVATE</Labels>
-      <ObjectId>16608</ObjectId>
-      <StateNumber>828</StateNumber>
-      <SubCategory>enum</SubCategory>
-      <SubKind>enum</SubKind>
-      <OwnerName>postgres</OwnerName>
-    </object-type>
-    <sequence id="267" parent="265" name="hibernate_sequence">
+    <sequence id="266" parent="265" name="hibernate_sequence">
       <DasType>bigint|0s</DasType>
       <ObjectId>16563</ObjectId>
-      <SequenceIdentity>1(10000003)</SequenceIdentity>
+      <SequenceIdentity>1(10000009)</SequenceIdentity>
       <StartValue>10000000</StartValue>
       <StateNumber>749</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <table id="268" parent="265" name="pastes">
+    <table id="267" parent="265" name="pastes">
       <ObjectId>16564</ObjectId>
-      <StateNumber>831</StateNumber>
+      <StateNumber>841</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <column id="269" parent="268" name="pastes_id">
+    <column id="268" parent="267" name="pastes_id">
       <DasType>bigint|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StateNumber>757</StateNumber>
       <TypeId>20</TypeId>
     </column>
-    <column id="270" parent="268" name="storage_key_name">
+    <column id="269" parent="267" name="storage_key_name">
       <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StateNumber>824</StateNumber>
       <TypeId>25</TypeId>
     </column>
-    <column id="271" parent="268" name="expiration_time">
+    <column id="270" parent="267" name="expiration_time">
       <DasType>timestamp(6)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StateNumber>759</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <column id="272" parent="268" name="status">
-      <DasType>status_type|0s</DasType>
+    <column id="271" parent="267" name="status">
+      <DasType>text|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>831</StateNumber>
-      <TypeId>16608</TypeId>
+      <StateNumber>841</StateNumber>
+      <TypeId>25</TypeId>
     </column>
-    <column id="273" parent="268" name="creation_time">
+    <column id="272" parent="267" name="creation_time">
       <DasType>timestamp(6)|0s</DasType>
       <Position>5</Position>
       <StateNumber>758</StateNumber>
       <TypeId>1114</TypeId>
     </column>
-    <index id="274" parent="268" name="pastes_pkey">
+    <index id="273" parent="267" name="pastes_pkey">
       <ColNames>pastes_id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16571</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>831</StateNumber>
+      <StateNumber>841</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="275" parent="268" name="pastes_pkey">
+    <key id="274" parent="267" name="pastes_pkey">
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16572</ObjectId>
       <Primary>1</Primary>
