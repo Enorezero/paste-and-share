@@ -1,6 +1,7 @@
 package ru.enorezero.paste.and.share.pasteservice.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import ru.enorezero.paste.and.share.pasteservice.exception.NotFoundException;
 import ru.enorezero.paste.and.share.pasteservice.exception.UnhashableLinkException;
@@ -24,6 +25,9 @@ public class PasteServiceImpl implements PasteService{
     @Autowired
     PastesRepository pastesRepo;
 
+    @Value("${cloud.aws.s3.bucket}")
+    private String bucketName;
+
     @Override
     public PasteResponse getByHash(String hash) {
         Optional<PasteEntity> foundEntity = Optional.of(pastesRepo.findOptionalByPastesId(unhashURLByBase64(hash))
@@ -35,7 +39,7 @@ public class PasteServiceImpl implements PasteService{
             throw new NotFoundException("Время жизни пасты истекло");
         }
 
-        String data = storage.downloadFile("rubin", foundEntity.get().getKeyName());
+        String data = storage.downloadFile(bucketName, foundEntity.get().getKeyName());
 
         return new PasteResponse(data, foundEntity.get().getStatus());
     }

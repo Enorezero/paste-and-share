@@ -6,15 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ee50edcb-979c-465f-ad6b-6a6c2f8da653" name="Changes" comment="AWS config">
       <change afterPath="$PROJECT_DIR$/paste-service/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cbaf91b2-8a73-4784-9127-e87c5806602d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cbaf91b2-8a73-4784-9127-e87c5806602d.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/cbaf91b2-8a73-4784-9127-e87c5806602d/storage_v2/_src_/database/pastes_db.3VRmyQ/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/cbaf91b2-8a73-4784-9127-e87c5806602d/storage_v2/_src_/database/pastes_db.3VRmyQ/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/PasteServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/PasteServiceApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/controller/PasteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/controller/PasteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/model/PasteEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/model/PasteEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/payload/Visibility.java" beforeDir="false" afterPath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/payload/Visibility.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/payload/request/PasteRequestValidator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/paste-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/paste-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paste-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/paste-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/service/PasteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/paste-service/src/main/java/ru/enorezero/paste/and/share/pasteservice/service/PasteServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +191,7 @@
       <workItem from="1698974468454" duration="7943000" />
       <workItem from="1699016125368" duration="14870000" />
       <workItem from="1699107312026" duration="7311000" />
-      <workItem from="1699160096590" duration="22077000" />
+      <workItem from="1699160096590" duration="23712000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1697034821830</created>
@@ -261,7 +255,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699340976943</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="bug fix">
+      <option name="closed" value="true" />
+      <created>1699443774758</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1699443774758</updated>
+    </task>
+    <task id="LOCAL-00010" summary="application.properties fix">
+      <option name="closed" value="true" />
+      <created>1699443888104</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1699443888104</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -304,7 +314,9 @@
     <MESSAGE value="Added auth service" />
     <MESSAGE value="started work with ResponseEntity" />
     <MESSAGE value="Added ExceptionHandlerController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added ExceptionHandlerController" />
+    <MESSAGE value="bug fix" />
+    <MESSAGE value="application.properties fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="application.properties fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
